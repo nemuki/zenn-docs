@@ -5,3 +5,47 @@ type: "tech"
 topics: ["Apple", "M1", "Rosetta2", "環境構築"]
 published: false
 ---
+
+先日，Appleの発表会で新型MacBook Proが発表され，見ていた僕はそのすぐ後から予約開始ということで最小構成の14インチMacBook Proを予約・購入しました．
+それが10月29日（金）に届いたのでとりあえずRosetta 2を使わずに環境構築をしてみました．
+https://zenn.dev/hinastory/articles/71983c4ac8aa2d
+先人がいるのは知っていますが，2月に比べるとできることが多くなっているので楽しんでいただけるかと思います．
+
+## 検証したソフト
+
+:::details 普段使いのソフト
+- Chrome
+- パソコン版Google Drive（旧: Google Drive File Stream)
+- Slack
+- Zoom
+- Microsoft Office
+- Microsoft Remote Desktop
+- 1Password
+- Paste
+- Meeting Bar
+- RunCat
+- BetterSnapTools
+- Tunnelblick
+:::
+
+:::details 開発系ソフト
+- Visual Studio Code
+- JetBrains ToolBox
+    - WebStorm
+- iTerm2
+- Termius
+- Xcodes
+:::
+
+:::details 開発環境
+- Homebrew
+- Starship
+- n
+    - Node.js(npm, npx)
+- anyenv(pyenv)
+- python3
+    - pip3
+    - pipenv
+- ghq
+- peco
+:::
