@@ -14,7 +14,7 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 ## 検証したソフト
 
 :::details 普段使いのソフト
-- Chrome
+- Google Chrome
 - パソコン版Google Drive（旧: Google Drive File Stream)
 - Slack
 - Zoom
@@ -49,3 +49,19 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 - ghq
 - peco
 :::
+
+## 普段使いのソフト
+
+### Google Chrome
+
+2月の時点で対応済み🎉
+インストーラーはIntel版と別れているので注意です
+![](/images/m1-mac/chrome.png)
+https://www.google.co.jp/chrome/
+
+### パソコン版 Google Drive (旧: Google Drive File Stream)
+
+最近のアップデート`v52.0`からM1に完全サポートされるようになりました🎉
+インストーラーはユニバーサル化されているようです
+https://www.google.com/intl/ja_jp/drive/download/
+https://support.google.com/a/answer/7577057?hl=ja
