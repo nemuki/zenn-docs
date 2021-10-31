@@ -48,6 +48,7 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 - iTerm2
 - Xcodes
 - Termius
+- StopLight Studio
   :::
 
 :::details 開発環境
@@ -57,7 +58,7 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 - n
   - Node.js(npm, npx)
 - anyenv
-- Python3 
+- Python3
   - pip3
   - pipenv
 - ghq・peco
@@ -76,12 +77,12 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 
 ### Slack
 
-ワークスペースの切り替えが爆速すぎて笑っちゃうやつ
+ワークスペースの切り替えが爆速すぎて笑っちゃうやつ．
 https://apps.apple.com/jp/app/slack-for-desktop/id803453959?mt=12
 
 ### Microsoft 365
 
-学生なので欠かせないソフト
+学生なので欠かせないソフトです．
 
 #### Word
 
@@ -115,23 +116,24 @@ https://apps.apple.com/jp/app/1password-7-password-manager/id1333542190?mt=12
 
 ### Paste
 
-Windows だと標準であるクリップボード履歴をみえるやつ．デザインがよい
+Windows だと標準であるクリップボード履歴を記録してくれる．
+デザインがよい．
 https://apps.apple.com/jp/app/paste-clipboard-manager/id967805235
 
 ### MeetingBar
 
-カレンダーと同期して，予定にビデオ会議の URL があればメニューバーから飛べるようになる
+カレンダーと同期して，予定にビデオ会議の URL があればメニューバーから飛べるようになる．
 https://apps.apple.com/jp/app/meetingbar/id1532419400?mt=12
 
 ### RunCat
 
-走ってる猫を見てるだけで癒される
+走ってる猫を見てるだけで癒される．
 https://apps.apple.com/jp/app/runcat/id1429033973?mt=12
 
 ### BetterSnapTool
 
-こちらも Windows だと標準のウィンドウ管理アプリ
-[PowerToys](https://github.com/microsoft/PowerToys)の FancyZone のような機能があってとてもいい
+こちらも Windows だと標準のウィンドウ管理アプリ．
+[PowerToys](https://github.com/microsoft/PowerToys) の FancyZones のような機能があってとてもいい．
 https://apps.apple.com/jp/app/bettersnaptool/id417375580?mt=12
 
 ## 普段使いのソフト
@@ -196,6 +198,7 @@ https://code.visualstudio.com/download
 2 月の時点で対応済み 🎉
 Mac のターミナルソフトといえばこれ．
 先人の HotKey でターミナルが立ち上がるようにする設定は控えめに言って神でした
+インストーラーはユニバーサル化されています 🎉
 https://iterm2.com/downloads.html
 
 ### JetBrains ToolBox
@@ -215,6 +218,12 @@ https://www.jetbrains.com/ja-jp/webstorm/
 ### Xcodes
 
 Xcode のバージョン管理ソフトです．複数の Xcode をインストールするのが簡単になります．
+後述の [Homebrew](#homebrew) からインストールします．
+
+```
+brew install --cask xcodes
+```
+
 https://github.com/RobotsAndPencils/XcodesApp/releases/
 
 ### Termius
@@ -223,6 +232,13 @@ https://github.com/RobotsAndPencils/XcodesApp/releases/
 ホストやログイン情報の共有，ローカルポートフォワードや SFTP クライアントまで内蔵しています．
 こちらも [GitHub Student Developer Pack](https://education.github.com/pack) で Premium アカウントが無料で使えます．
 https://apps.apple.com/jp/app/termius-ssh-client/id1176074088?mt=12
+
+### StopLight Studio
+
+OpenAPI ドキュメントを GUI から意識せずに仕様に沿った yaml ファイルを生成してくれるソフトです．
+インストーラーはユニバーサル化されています 🎉
+
+https://stoplight.io/studio/
 
 ## 開発環境
 
@@ -239,9 +255,9 @@ https://brew.sh/index_ja
 
 ### Starship
 
-お気に入りのマルチプラットフォーム対応プロンプト
+お気に入りのマルチプラットフォーム対応プロンプトです．
 これと[Dracula](https://draculatheme.com/)テーマを合わせるととても可愛いです．
-Homebrew からインストール後 `.zshrc` に設定を追記します
+Homebrew からインストール後 `.zshrc` に設定を追記します．
 
 ```sh
 brew install starship
@@ -326,10 +342,9 @@ anyenv install --init
 
 https://github.com/anyenv/anyenv
 
-
 ### Python3
 
-Macに初期から入っているバージョンは以下でした
+Mac に初期から入っているバージョンは以下でした．
 
 ```
 python3 --version
@@ -338,7 +353,7 @@ Python 3.8.9
 
 #### pip3
 
-iTermを入れた時に Command line tools for Xcode のインストールを求められた時に入ったものは以下でした
+iTerm を入れた時に Command line tools for Xcode のインストールを求められた時に入ったものは以下でした．
 
 ```
 pip3 --verison
@@ -347,8 +362,8 @@ pip 20.2.3 from /Library/Developer/CommandLineTools/Library/Frameworks/Python3.f
 
 #### pipenv
 
-pip3のモジュールを管理するソフト
-Homebrew からインストールします
+pip3 のモジュールを管理するソフト．
+Homebrew からインストールします．
 
 ```sh
 brew install pipenv
@@ -358,8 +373,8 @@ https://pipenv-ja.readthedocs.io/ja/translate-ja/
 
 ### ghq・peco
 
-gitのリモートリポジトリ管理ソフトと組み合わせると便利なフィルタリングツールです．
-ともにHomebrewからインストールします．
+git のリモートリポジトリ管理ソフトと組み合わせると便利なフィルタリングツールです．
+ともに Homebrew からインストールします．
 設定は [Songmu/ghq-handbook](https://github.com/Songmu/ghq-handbook) を参考にしました．
 
 ```sh
@@ -374,14 +389,14 @@ https://github.com/peco/peco
 
 ### Google 日本語入力
 
-Windowsで使ってるので欲しかったですが，ことえりの辞書を自動で共有してくれる機能が便利なので耐えです．
+Windows で使ってるので欲しかったですが，ことえりの辞書を自動で共有してくれる機能が便利なので耐えです．
 
 ### Microsoft OneDrive
 
-Officeを使う上で欲しかったです…
-2021年後半にApple M1にネイティブ対応するみたいなのでそれを待ちます…
+Office を使う上で欲しかったです…
+2021 年後半に Apple M1 にネイティブ対応するみたいなのでそれを待ちます…
 https://pc.watch.impress.co.jp/docs/news/1330557.html
 
 ### OBS Studio
 
-VirtualCam用に欲しかったですが，なくても大丈夫なので耐えです．
+VirtualCam 用に欲しかったですが，なくても大丈夫なので耐えです．
