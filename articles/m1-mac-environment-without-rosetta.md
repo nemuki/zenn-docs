@@ -16,10 +16,12 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 :::details Mac App Store からインストールできたもの
 
 - Slack
-- Microsoft Office
+- Microsoft 365
   - Word
   - Excel
   - PowerPoint
+  - Outlook
+  - OneNote
 - Microsoft Remote Desktop
 - 1Password
 - Paste
@@ -66,6 +68,7 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 - Google 日本語入力
 - OneDrive
 - OBS Studio
+- Display Menu
 - OpenVPN Connect
   :::
 
@@ -91,6 +94,10 @@ https://apps.apple.com/jp/app/microsoft-excel/id462058435?mt=12
 #### PowerPoint
 
 https://apps.apple.com/jp/app/microsoft-powerpoint/id462062816?mt=12
+
+### Outlook
+
+https://apps.apple.com/jp/app/microsoft-outlook/id985367838?mt=12
 
 ### Microsoft Remote Desktop
 
@@ -153,9 +160,48 @@ OpenVPN のクライアントソフトです．
 Stable 版でインストーラーはユニバーサル化されています 🎉
 https://tunnelblick.net/downloads.html
 
+### SwitchResX
+
+Mac のディスプレイ解像度を自由に変更できるようになるソフトです．
+Mac App Store にある[Display Menu](https://apps.apple.com/jp/app/display-menu/id549083868?mt=12)が対応していなかったためこちらをインストール．
+インストーラーはユニバーサル化されています 🎉
+https://www.madrau.com/srx_download/download.html
+
 ### Alfred
 
 Spotlight の強化版的なさむしんぐです．
 Mac App Store にもありますが，そちらは更新がされてないようで公式サイトのインストーラーからインストールしました．
 インストーラーはユニバーサル化されています 🎉
 https://www.alfredapp.com/
+
+## 開発系ソフト
+
+### Visual Studio Code
+
+2 月は Insider 版でしたが，既に正式対応しています
+インストーラーはユニバーサル化されています 🎉
+https://code.visualstudio.com/download
+
+### JetBrains ToolBox
+
+[GitHub Student Developer Pack](https://education.github.com/pack)でライセンスを頂いています．
+インストーラーは Intel 版と別れているので注意です．
+![](/images/m1-mac/jetbrains-toolbox.png)
+https://www.jetbrains.com/ja-jp/toolbox-app/
+
+#### WebStorm
+
+フロントエンド(React)を書くように Toolbox からインストール．
+https://www.jetbrains.com/ja-jp/webstorm/
+
+### Xcodes
+
+Xcode のバージョン管理ソフトです．複数の Xcode をインストールするのが簡単になります．
+https://github.com/RobotsAndPencils/XcodesApp/releases/
+
+### Termius
+
+マルチプラットフォーム対応の SSH クライアント
+ホストやログイン情報の共有，ローカルポートフォワードや SFTP クライアントまで内蔵しています．
+こちらも [GitHub Student Developer Pack](https://education.github.com/pack) で Premium アカウントが無料で使えます．
+https://apps.apple.com/jp/app/termius-ssh-client/id1176074088?mt=12
