@@ -1,9 +1,9 @@
 ---
-title: "絶対にRosetta 2を入れてはいけないM1 Mac環境構築 2021 10月末編"
+title: "絶対にRosetta 2を入れたくない人によるM1 Mac環境構築 2021 10月末編"
 emoji: "💻"
 type: "tech"
 topics: ["Apple", "M1", "Rosetta2", "環境構築"]
-published: false
+published: true
 ---
 
 先日，Apple の発表会で新型 MacBook Pro が発表され，見ていた僕はそのすぐ後から予約開始ということで最小構成の 14 インチ MacBook Pro を予約・購入しました．
