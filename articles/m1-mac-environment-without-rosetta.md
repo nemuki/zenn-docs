@@ -136,7 +136,9 @@ https://apps.apple.com/jp/app/bettersnaptool/id417375580?mt=12
 
 2 月の時点で対応済み 🎉
 インストーラーは Intel 版と別れているので注意です．
+:::details ダウンロードページの画像
 ![](/images/m1-mac/chrome.png)
+:::
 https://www.google.co.jp/chrome/
 
 ### パソコン版 Google Drive (旧: Google Drive File Stream)
@@ -150,7 +152,9 @@ https://support.google.com/a/answer/7577057?hl=ja
 
 2 月の時点で対応済み 🎉
 インストーラーは Intel 版と別れているので注意です．
+:::details ダウンロードページの画像
 ![](/images/m1-mac/zoom.png)
+:::
 https://zoom.us/download#client_4meeting
 
 ### TunnelBlick
@@ -186,7 +190,9 @@ https://code.visualstudio.com/download
 
 [GitHub Student Developer Pack](https://education.github.com/pack)でライセンスを頂いています．
 インストーラーは Intel 版と別れているので注意です．
+:::details ダウンロードページの画像
 ![](/images/m1-mac/jetbrains-toolbox.png)
+:::
 https://www.jetbrains.com/ja-jp/toolbox-app/
 
 #### WebStorm
