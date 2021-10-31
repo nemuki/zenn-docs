@@ -55,12 +55,11 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 - Starship
 - n
   - Node.js(npm, npx)
-- anyenv(pyenv)
-- Python3
+- anyenv
+- Python3 
   - pip3
   - pipenv
-- ghq
-- peco
+- ghq・peco
   :::
 
 :::details 残念ながら未対応だったもの
@@ -223,3 +222,146 @@ https://github.com/RobotsAndPencils/XcodesApp/releases/
 ホストやログイン情報の共有，ローカルポートフォワードや SFTP クライアントまで内蔵しています．
 こちらも [GitHub Student Developer Pack](https://education.github.com/pack) で Premium アカウントが無料で使えます．
 https://apps.apple.com/jp/app/termius-ssh-client/id1176074088?mt=12
+
+## 開発環境
+
+### Homebrew
+
+Mac のパッケージマネージャといえばこれ．
+公式サイトのワンライナースクリプトで M1 対応版がインストールされます．
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+https://brew.sh/index_ja
+
+### Starship
+
+お気に入りのマルチプラットフォーム対応プロンプト
+これと[Dracula](https://draculatheme.com/)テーマを合わせるととても可愛いです．
+Homebrew からインストール後 `.zshrc` に設定を追記します
+
+```sh
+brew install starship
+```
+
+```sh:.zshrc
+# Starship
+eval "$(starship init zsh)"
+```
+
+https://starship.rs/ja-jp/
+
+### n
+
+Node.js のバージョン管理ソフトです．
+Ubuntu で使い慣れているのであとで anyenv を入れますがこっちが好きです．
+Homebrew からインストールします．
+
+```sh
+brew install n
+```
+
+https://github.com/tj/n/releases/
+
+#### Node.js
+
+最近 LTS 版が v16 になりましたね
+こちらは [n](#n) からインストールします．
+:::details 現時点で n からインストールできる arm64 版のリスト
+
+```
+❯ n ls-remote -a arm64 --all
+17.0.1
+17.0.0
+16.13.0
+16.12.0
+16.11.1
+16.11.0
+16.10.0
+16.9.1
+16.9.0
+16.8.0
+16.7.0
+16.6.2
+16.6.1
+16.6.0
+16.5.0
+16.4.2
+16.4.1
+16.4.0
+16.3.0
+16.2.0
+16.1.0
+16.0.0
+```
+
+:::
+
+```sh
+sudo n lts
+```
+
+```
+node -v
+v16.13.0
+
+npm -v
+8.0.0
+```
+
+https://nodejs.org/ja/
+
+### anyenv
+
+\*\*env を楽にインストールできるようにするソフトです．
+Homebrew からインストールします．
+
+```
+brew install anyenv
+anyenv install --init
+```
+
+https://github.com/anyenv/anyenv
+
+
+### Python3
+
+Macに初期から入っているバージョンは以下でした
+
+```
+python3 --version
+Python 3.8.9
+```
+
+#### pip3
+
+iTermを入れた時に Command line tools for Xcode のインストールを求められた時に入ったものは以下でした
+
+```
+pip3 --verison
+pip 20.2.3 from /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/site-packages/pip (python 3.8)
+```
+
+#### pipenv
+
+pip3のモジュールを管理するソフト
+Homebrew からインストールします
+
+```sh
+brew install pipenv
+```
+
+https://pipenv-ja.readthedocs.io/ja/translate-ja/
+
+### ghq・peco
+
+gitのリモートリポジトリ管理ソフトと組み合わせると便利なフィルタリングツールです．
+ともにHomebrewからインストールします．
+設定は [Songmu/ghq-handbook](https://github.com/Songmu/ghq-handbook) を参考にしました．
+
+```sh
+brew install ghq
+brew install peco
+```
