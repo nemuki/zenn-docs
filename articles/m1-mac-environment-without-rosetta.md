@@ -7,7 +7,7 @@ published: false
 ---
 
 先日，Apple の発表会で新型 MacBook Pro が発表され，見ていた僕はそのすぐ後から予約開始ということで最小構成の 14 インチ MacBook Pro を予約・購入しました．
-それが 10 月 29 日（金）に届いたのでとりあえず Rosetta 2 を使わずに環境構築をしてみました．
+それが 10 月 29 日(金)に届いたのでとりあえず Rosetta 2 を使わずに環境構築をしてみました．
 https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 先人がいるのは知っていますが，2 月に比べるとできることが多くなっているので楽しんでいただけるかと思います．
 
@@ -62,11 +62,12 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
   :::
 
 :::details 残念ながら未対応だったもの
+
 - Google 日本語入力
 - OneDrive
 - OBS Studio
 - OpenVPN Connect
-:::
+  :::
 
 ## 普段使いのソフト
 
@@ -90,3 +91,10 @@ OpenVPN のクライアントソフトです．
 公式の[OpenVPN Connect](https://openvpn.net/vpn-client/)が対応していなかったため，その代わりのソフトです．
 Stable 版でインストーラーはユニバーサル化されています 🎉
 https://tunnelblick.net/downloads.html
+
+### Alfred
+
+Spotlightの強化版的なさむしんぐです．
+Mac App Storeにもありますが，そちらは更新がされてないようで公式サイトのインストーラーからインストールしました．
+インストーラーはユニバーサル化されています 🎉
+https://www.alfredapp.com/
