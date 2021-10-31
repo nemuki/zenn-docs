@@ -99,6 +99,10 @@ https://apps.apple.com/jp/app/microsoft-powerpoint/id462062816?mt=12
 
 https://apps.apple.com/jp/app/microsoft-outlook/id985367838?mt=12
 
+### OneNote
+
+https://apps.apple.com/jp/app/microsoft-onenote/id784801555?mt=12
+
 ### Microsoft Remote Desktop
 
 Retina のオプションを入れたら良い感じに表示できる
@@ -168,6 +172,7 @@ https://tunnelblick.net/downloads.html
 
 Mac のディスプレイ解像度を自由に変更できるようになるソフトです．
 Mac App Store にある[Display Menu](https://apps.apple.com/jp/app/display-menu/id549083868?mt=12)が対応していなかったためこちらをインストール．
+ちなみにドットバイドット表示すると，[ノッチは無くなります](https://twitter.com/nemuki_dev/status/1454027170116820994?s=20)…笑
 インストーラーはユニバーサル化されています 🎉
 https://www.madrau.com/srx_download/download.html
 
@@ -182,9 +187,16 @@ https://www.alfredapp.com/
 
 ### Visual Studio Code
 
-2 月は Insider 版でしたが，既に正式対応しています
+2 月は Insider 版でしたが，既に正式対応しています．
 インストーラーはユニバーサル化されています 🎉
 https://code.visualstudio.com/download
+
+### iTerm2
+
+2 月の時点で対応済み 🎉
+Mac のターミナルソフトといえばこれ．
+先人の HotKey でターミナルが立ち上がるようにする設定は控えめに言って神でした
+https://iterm2.com/downloads.html
 
 ### JetBrains ToolBox
 
