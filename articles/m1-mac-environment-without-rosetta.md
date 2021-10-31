@@ -73,9 +73,12 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 
 ### Slack
 
+ワークスペースの切り替えが爆速すぎて笑っちゃうやつ
 https://apps.apple.com/jp/app/slack-for-desktop/id803453959?mt=12
 
 ### Microsoft 365
+
+学生なので欠かせない
 
 #### Word
 
@@ -91,26 +94,33 @@ https://apps.apple.com/jp/app/microsoft-powerpoint/id462062816?mt=12
 
 ### Microsoft Remote Desktop
 
+Retina のオプションを入れたら良い感じに表示できる
 https://apps.apple.com/jp/app/microsoft-remote-desktop/id1295203466?mt=12
 
 ### 1Password
 
+先日，Chrome 拡張機能がアップデートされて指紋認証がつかえるようになってうれしい 🎉
 https://apps.apple.com/jp/app/1password-7-password-manager/id1333542190?mt=12
 
 ### Paste
 
+Windows だと標準であるクリップボード履歴をみえるやつ．デザインがよい
 https://apps.apple.com/jp/app/paste-clipboard-manager/id967805235
 
 ### MeetingBar
 
+カレンダーと同期して，予定にビデオ会議の URL があればメニューバーから飛べるようになる
 https://apps.apple.com/jp/app/meetingbar/id1532419400?mt=12
 
 ### RunCat
 
+走ってる猫を見てるだけで癒される
 https://apps.apple.com/jp/app/runcat/id1429033973?mt=12
 
 ### BetterSnapTool
 
+こちらも Windows だと標準のウィンドウ管理アプリ
+[PowerToys](https://github.com/microsoft/PowerToys)の FancyZone のような機能があってとてもいい
 https://apps.apple.com/jp/app/bettersnaptool/id417375580?mt=12
 
 ## 普段使いのソフト
@@ -128,6 +138,13 @@ https://www.google.co.jp/chrome/
 インストーラーはユニバーサル化されています．
 https://www.google.com/intl/ja_jp/drive/download/
 https://support.google.com/a/answer/7577057?hl=ja
+
+### Zoom
+
+2 月の時点で対応済み 🎉
+インストーラーは Intel 版と別れているので注意です．
+![](/images/m1-mac/zoom.png)
+https://zoom.us/download#client_4meeting
 
 ### TunnelBlick
 
