@@ -35,6 +35,7 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 - Google Chrome
 - パソコン版 Google Drive（旧: Google Drive File Stream)
 - Tunnelblick
+- Alfred
   :::
 
 :::details 開発系ソフト
@@ -53,12 +54,19 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 - n
   - Node.js(npm, npx)
 - anyenv(pyenv)
-- python3
+- Python3
   - pip3
   - pipenv
 - ghq
 - peco
   :::
+
+:::details 残念ながら未対応だったもの
+- Google 日本語入力
+- OneDrive
+- OBS Studio
+- OpenVPN Connect
+:::
 
 ## 普段使いのソフト
 
