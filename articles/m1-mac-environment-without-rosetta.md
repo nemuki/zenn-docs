@@ -365,3 +365,6 @@ gitのリモートリポジトリ管理ソフトと組み合わせると便利�
 brew install ghq
 brew install peco
 ```
+
+https://github.com/x-motemen/ghq
+https://github.com/peco/peco
