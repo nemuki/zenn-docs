@@ -184,6 +184,15 @@ Mac App Store にもありますが，そちらは更新がされてないよう
 インストーラーはユニバーサル化されています 🎉
 https://www.alfredapp.com/
 
+## Bartender 4
+
+ノッチ付きMacではメニューバーのアイコンのマージンが動的に変わる仕様で，たくさんアイコンがあるとはみ出してしまい，非表示になってしまうことがあります．
+それを良い感じに防いでくれるソフトです．
+
+![](/images/m1-mac/bartender.png)
+
+https://www.macbartender.com/
+
 # 開発系ソフト
 
 ## Visual Studio Code
