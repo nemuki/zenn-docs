@@ -38,6 +38,7 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 - [TunnelBlick](#tunnelblick)
 - [SwitchResX](#switchresx)
 - [Alfred](#alfred)
+- [Bartender 4](#bartender-4)
   :::
 
 :::details 開発系ソフト
@@ -186,8 +187,9 @@ https://www.alfredapp.com/
 
 ## Bartender 4
 
-ノッチ付きMacではメニューバーのアイコンのマージンが動的に変わる仕様で，たくさんアイコンがあるとはみ出してしまい，非表示になってしまうことがあります．
+ノッチ付き Mac ではメニューバーのアイコンのマージンが動的に変わる仕様で，たくさんアイコンがあるとはみ出してしまい，非表示になってしまうことがあります．
 それを良い感じに防いでくれるソフトです．
+設定の General から「Bartender Bar」にチェックを入れると以下のような表示になります．
 
 ![](/images/m1-mac/bartender.png)
 
@@ -268,12 +270,14 @@ eval "$(starship init zsh)"
 https://starship.rs/ja-jp/
 
 ## git
+
 共同開発には欠かせないですね．
-標準で入っているのが古かった気がするのでHomebrewからインストールします．
+標準で入っているのが古かった気がするので Homebrew からインストールします．
 
 ```
 brew install git
 ```
+
 ## Xcodes
 
 Xcode のバージョン管理ソフトです．複数の Xcode をインストールするのが簡単になります．
