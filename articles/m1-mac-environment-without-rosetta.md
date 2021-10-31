@@ -16,7 +16,6 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 :::details Mac App Store からインストールできたもの
 
 - Slack
-- Zoom
 - Microsoft Office
   - Word
   - Excel
@@ -27,13 +26,13 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 - MeetingBar
 - RunCat
 - BetterSnapTool
-- Termius
   :::
 
 :::details 普段使いのソフト
 
 - Google Chrome
 - パソコン版 Google Drive（旧: Google Drive File Stream)
+- Zoom
 - Tunnelblick
 - Alfred
   :::
@@ -45,6 +44,7 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
   - WebStorm
 - iTerm2
 - Xcodes
+- Termius
   :::
 
 :::details 開発環境
@@ -68,6 +68,50 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 - OBS Studio
 - OpenVPN Connect
   :::
+
+## Mac App Store からインストールできたもの
+
+### Slack
+
+https://apps.apple.com/jp/app/slack-for-desktop/id803453959?mt=12
+
+### Microsoft 365
+
+#### Word
+
+https://apps.apple.com/jp/app/microsoft-word/id462054704?mt=12
+
+#### Excel
+
+https://apps.apple.com/jp/app/microsoft-excel/id462058435?mt=12
+
+#### PowerPoint
+
+https://apps.apple.com/jp/app/microsoft-powerpoint/id462062816?mt=12
+
+### Microsoft Remote Desktop
+
+https://apps.apple.com/jp/app/microsoft-remote-desktop/id1295203466?mt=12
+
+### 1Password
+
+https://apps.apple.com/jp/app/1password-7-password-manager/id1333542190?mt=12
+
+### Paste
+
+https://apps.apple.com/jp/app/paste-clipboard-manager/id967805235
+
+### MeetingBar
+
+https://apps.apple.com/jp/app/meetingbar/id1532419400?mt=12
+
+### RunCat
+
+https://apps.apple.com/jp/app/runcat/id1429033973?mt=12
+
+### BetterSnapTool
+
+https://apps.apple.com/jp/app/bettersnaptool/id417375580?mt=12
 
 ## 普段使いのソフト
 
@@ -94,7 +138,7 @@ https://tunnelblick.net/downloads.html
 
 ### Alfred
 
-Spotlightの強化版的なさむしんぐです．
-Mac App Storeにもありますが，そちらは更新がされてないようで公式サイトのインストーラーからインストールしました．
+Spotlight の強化版的なさむしんぐです．
+Mac App Store にもありますが，そちらは更新がされてないようで公式サイトのインストーラーからインストールしました．
 インストーラーはユニバーサル化されています 🎉
 https://www.alfredapp.com/
