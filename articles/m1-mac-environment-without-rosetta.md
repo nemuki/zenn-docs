@@ -36,6 +36,7 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 - パソコン版 Google Drive（旧: Google Drive File Stream)
 - Zoom
 - Tunnelblick
+- SwitchResX
 - Alfred
   :::
 
@@ -80,7 +81,7 @@ https://apps.apple.com/jp/app/slack-for-desktop/id803453959?mt=12
 
 ### Microsoft 365
 
-学生なので欠かせない
+学生なので欠かせないソフト
 
 #### Word
 
@@ -104,7 +105,7 @@ https://apps.apple.com/jp/app/microsoft-onenote/id784801555?mt=12
 
 ### Microsoft Remote Desktop
 
-Retina のオプションを入れたら良い感じに表示できる
+Retina のオプションを入れたら良い感じに表示できる．
 https://apps.apple.com/jp/app/microsoft-remote-desktop/id1295203466?mt=12
 
 ### 1Password
@@ -368,3 +369,19 @@ brew install peco
 
 https://github.com/x-motemen/ghq
 https://github.com/peco/peco
+
+## 残念ながら未対応だったもの
+
+### Google 日本語入力
+
+Windowsで使ってるので欲しかったですが，ことえりの辞書を自動で共有してくれる機能が便利なので耐えです．
+
+### Microsoft OneDrive
+
+Officeを使う上で欲しかったです…
+2021年後半にApple M1にネイティブ対応するみたいなのでそれを待ちます…
+https://pc.watch.impress.co.jp/docs/news/1330557.html
+
+### OBS Studio
+
+VirtualCam用に欲しかったですが，なくても大丈夫なので耐えです．
