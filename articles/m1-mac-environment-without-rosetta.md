@@ -11,6 +11,13 @@ published: true
 https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 先人がいるのは知っていますが，2 月に比べるとできることが多くなっているので楽しんでいただけるかと思います．
 
+11 月 1 日 追記
+
+悲しいことに意識していないうちに Rosseta 2 が入り込んでいました…
+以下のアプリが Intel 版でインストールされていました．
+誤った情報を公開してしまい，申し訳ございません．
+![](/images/m1-mac/system.png)
+
 # 検証したソフト
 
 :::details Mac App Store からインストールできたもの
@@ -46,9 +53,9 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 - [Visual Studio Code](#visual-studio-code)
 - [iTerm2](#iterm2)
 - [JetBrains ToolBox](#jetbrains-toolbox)
-  - [WebStorm](#webstorm)
+  ~~- [WebStorm](#webstorm)~~
 - [Termius](#termius)
-- [StopLight Studio](#stoplight-studio)
+~~- [StopLight Studio](#stoplight-studio)~~
   :::
 
 :::details 開発環境
@@ -71,6 +78,8 @@ https://zenn.dev/hinastory/articles/71983c4ac8aa2d
 - [Google 日本語入力](#google-日本語入力)
 - [Microsoft OneDrive](#microsoft-onedrive)
 - [OBS Studio](#obs-studio)
+- [WebStorm](#webstorm)
+- [StopLight Studio](#stoplight-studio)
   :::
 
 # Mac App Store からインストールできたもの
@@ -220,24 +229,12 @@ https://iterm2.com/downloads.html
 :::
 https://www.jetbrains.com/ja-jp/toolbox-app/
 
-### WebStorm
-
-フロントエンド(React)を書くように Toolbox からインストール．
-https://www.jetbrains.com/ja-jp/webstorm/
-
 ## Termius
 
 マルチプラットフォーム対応の SSH クライアント
 ホストやログイン情報の共有，ローカルポートフォワードや SFTP クライアントまで内蔵しています．
 こちらも [GitHub Student Developer Pack](https://education.github.com/pack) で Premium アカウントが無料で使えます．
 https://apps.apple.com/jp/app/termius-ssh-client/id1176074088?mt=12
-
-## StopLight Studio
-
-OpenAPI ドキュメントを GUI から意識せずに仕様に沿った yaml ファイルを生成してくれるソフトです．
-インストーラーはユニバーサル化されています 🎉
-
-https://stoplight.io/studio/
 
 # 開発環境
 
@@ -419,6 +416,18 @@ https://pc.watch.impress.co.jp/docs/news/1330557.html
 ## OBS Studio
 
 VirtualCam 用に欲しかったですが，なくても大丈夫なので耐えです．
+
+### WebStorm
+
+フロントエンド(React)を書くように Toolbox からインストール．
+https://www.jetbrains.com/ja-jp/webstorm/
+
+## StopLight Studio
+
+OpenAPI ドキュメントを GUI から意識せずに仕様に沿った yaml ファイルを生成してくれるソフトです．
+インストーラーはユニバーサル化されています 🎉
+
+https://stoplight.io/studio/
 
 # まとめ
 
