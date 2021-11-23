@@ -305,7 +305,7 @@ interface WeatherService {
 
 https://github.com/google/secrets-gradle-plugin
 
-- プロジェクトルートの `build.gradle(PackageName)` の `dependencies` に追記
+1. プロジェクトルートの `build.gradle(PackageName)` の `dependencies` に追記
 
 ```groovy:build.gradle
 dependencies {
@@ -314,7 +314,7 @@ dependencies {
 }
 ```
 
-- アプリレベルの `build.gradle(:app)` の `plugins` に追記
+2. アプリレベルの `build.gradle(:app)` の `plugins` に追記
 
 ```groovy:build.gradle
 plugins {
@@ -322,6 +322,15 @@ plugins {
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 ```
+
+3. `local.properties` に値を追加する
+
+```sh:local.properties
+OWM_API_KEY=your_api_key
+```
+
+4. `BuildConfig.OWM_API_KEY` と書くことでソースからアクセスできる
+   1. 最初はエラーが出るが、ビルドしたら正常にうごく(はず)
 
 ## API アクセスの用の記述を追加
 
@@ -377,6 +386,27 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
+# 詰まったところ
+
+## Layout Editor で Rendering Problems が出て UI が表示されない
+
+- こんな状態になった
+
+https://twitter.com/nemuki_dev/status/1462683570817093632
+
+- `Code` 表示にして `EditText` を確認する
+  - `android:autofillHints="no"` に変更したら UI が表示された
+
+```xml:activity_main.xml
+<EditText
+    …
+    android:autofillHints="no">
+```
+
+# まとめ
+
+超絶雑にまとめてみました。初めての Android アプリ開発でとりあえず API アクセスまで確認できてよかったです
+
 # 参考サイト
 
 https://qiita.com/yoppie_x/items/bbc0ca7a4c8a4b29e141
@@ -384,3 +414,5 @@ https://qiita.com/yoppie_x/items/bbc0ca7a4c8a4b29e141
 https://101010.fun/programming/android-try-retrofit.html
 
 https://note.com/yaxarat/n/n8de78930ff05
+
+https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q10244516400
