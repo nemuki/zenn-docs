@@ -8,6 +8,11 @@ published: false
 
 [Hack U KOSEN 2021](https://hacku.yahoo.co.jp/kosen2021/)で Android アプリを作ることになったのでそれのチュートリアルとして作ったアプリの作り方的なところを備忘録として残しておく。
 
+# やること
+
+- Kotlin を使って Android アプリ開発
+- [Open Weather Map](https://openweathermap.org/) の API から天気情報を GET して Activity に表示する
+
 # 出来上がったリポジトリ
 
 https://github.com/nemuki/WeatherAndroidApp
