@@ -58,10 +58,6 @@ https://github.com/nemuki/WeatherAndroidApp
 
 ## API アクセスをするために Gradle で Retrofit を追加
 
-- 参考にしたサイト
-
-https://qiita.com/yoppie_x/items/bbc0ca7a4c8a4b29e141
-
 - `app/build.gradle` の `dependencies` に Retrofit と Moshi を追加
 
 ```json:app/build.gradle
@@ -202,11 +198,11 @@ data class Sys(
 
 ```
 
-## RefrofitでGETアクセスをするためにインターフェースを作成
+## Refrofit で GET アクセスをするためにインターフェースを作成
 
-- Open Weather Map の [Current weather data](https://openweathermap.org/current) API のアクセスURLは `api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}` 
-- ドメイン以下のパスをGETアノテーションの引数にわたすのでこの場合は `data/2.5/weather/` を渡す
-  - GETのパラメーターが必要な場合は `@Query` オプションで指定できる
+- Open Weather Map の [Current weather data](https://openweathermap.org/current) API のアクセス URL は `api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}`
+- ドメイン以下のパスを GET アノテーションの引数にわたすのでこの場合は `data/2.5/weather/` を渡す
+  - GET のパラメーターが必要な場合は `@Query` オプションで指定できる
 
 ```kotlin:WeatherService.kt
 package com.nemuki.weatherandroidapp
@@ -222,5 +218,13 @@ interface WeatherService {
         @Query("appid") apiKey: String,
         @Query("units") units: String
     ): Call<WeatherInfo>
-} 
+}
 ```
+
+# 参考サイト
+
+https://qiita.com/yoppie_x/items/bbc0ca7a4c8a4b29e141
+
+https://101010.fun/programming/android-try-retrofit.html
+
+https://note.com/yaxarat/n/n8de78930ff05
