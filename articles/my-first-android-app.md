@@ -46,7 +46,7 @@ https://github.com/nemuki/WeatherAndroidApp
 
 ```xml:app/src/main/AndroidManifest.xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.nemuki.weatherandroidapp">
+    package="com.id.packagename">
 
     <uses-permission android:name="android.permission.INTERNET" />  <!-- これ -->
     <application
@@ -60,7 +60,7 @@ https://github.com/nemuki/WeatherAndroidApp
 
 - `app/build.gradle` の `dependencies` に Retrofit と Moshi を追加
 
-```json:app/build.gradle
+```groovy:app/build.gradle
 
 dependencies {
     …
@@ -140,7 +140,7 @@ dependencies {
 > これって毎回必要になってくるんだろうか…
 
 ```kotlin:WeatherInfo.kt
-package com.nemuki.weatherandroidapp
+package com.id.packagename
 
 data class WeatherInfo(
     val coord: Coord,
@@ -205,7 +205,7 @@ data class Sys(
   - GET のパラメーターが必要な場合は `@Query` オプションで指定できる
 
 ```kotlin:WeatherService.kt
-package com.nemuki.weatherandroidapp
+package com.id.packagename
 
 import retrofit2.Call
 import retrofit2.http.GET
@@ -299,10 +299,34 @@ interface WeatherService {
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
+## API キーを隠すために Secrets Gradle Plugin for Android を使う
+
+- Open Weather Map の API キーを GitHub に push するわけにはいかないので Secrets Gradle Plugin for Android で隠せるようにする
+
+https://github.com/google/secrets-gradle-plugin
+
+- プロジェクトルートの `build.gradle(PackageName)` の `dependencies` に追記
+
+```groovy:build.gradle
+dependencies {
+    …
+    classpath "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.0"
+}
+```
+
+- アプリレベルの `build.gradle(:app)` の `plugins` に追記
+
+```groovy:build.gradle
+plugins {
+    …
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+}
+```
+
 ## API アクセスの用の記述を追加
 
 - 今回は `MainActivity` に追加
-- Retrofitでアクセスするときはメインスレッドでやるとエラーが起こるので `thread` で行う
+- Retrofit でアクセスするときはメインスレッドでやるとエラーが起こるので `thread` で行う
 
 ```kotlin:MainActivity.kt
 class MainActivity : AppCompatActivity() {
