@@ -6,7 +6,7 @@ topics: ["Android", "Kotlin", "Retrofit"]
 published: true
 ---
 
-[Hack U KOSEN 2021](https://hacku.yahoo.co.jp/kosen2021/)で Android アプリを作ることになったのでそれのチュートリアルとして作ったアプリの作り方的なところを備忘録として(超絶雑に)残しておく。
+[Hack U KOSEN 2021](https://hacku.yahoo.co.jp/kosen2021/) で Android アプリを作ることになったのでそれのチュートリアルとして作ったアプリの作り方的なところを備忘録として(超絶雑に)残しておく。
 
 # やること
 
@@ -405,7 +405,7 @@ https://twitter.com/nemuki_dev/status/1462683570817093632
 
 # まとめ
 
-超絶雑にまとめてみました。初めての Android アプリ開発でとりあえず API アクセスまで確認できてよかったです
+超絶雑にまとめてみました。初めての Android アプリ開発でとりあえず API アクセスまで確認できてよかったです。
 
 # 参考サイト
 
