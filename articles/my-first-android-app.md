@@ -3,7 +3,7 @@ title: "KotlinとRetrofitを使った初めてのAndroidアプリ開発"
 emoji: "🌤"
 type: "tech"
 topics: ["Android", "Kotlin", "Retrofit"]
-published: false
+published: true
 ---
 
 [Hack U KOSEN 2021](https://hacku.yahoo.co.jp/kosen2021/)で Android アプリを作ることになったのでそれのチュートリアルとして作ったアプリの作り方的なところを備忘録として(超絶雑に)残しておく。
