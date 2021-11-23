@@ -20,6 +20,15 @@ https://github.com/nemuki/WeatherAndroidApp
     - Gradle 7.0.2
 - デバッグ端末
   - Android Emulator - Pixel_3a_API_31_arm64-v8a
+    - Android 12
   - SHARP AQUOS R2 Compact SH-M09
+    - Android 11
 
-##
+# プロジェクトを作る
+
+1. New Project をクリック
+2. Empty Activity を選択し、次へをクリック
+3. プロジェクトの設定を適当に
+   1. Name: WeatherAndroidApp
+   2. Minimum SDK: API 24: Android 7.0 (Nougat)
+      (これは手持ちの Xperia XZ でもデバッグするかなと思ったためこのバージョンに)
