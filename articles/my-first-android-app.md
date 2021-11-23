@@ -6,7 +6,7 @@ topics: ["Android", "Kotlin", "Retrofit"]
 published: false
 ---
 
-[Hack U KOSEN 2021](https://hacku.yahoo.co.jp/kosen2021/)で Android アプリを作ることになったのでそれのチュートリアルとして作ったアプリの作り方的なところを備忘録として残しておく。
+[Hack U KOSEN 2021](https://hacku.yahoo.co.jp/kosen2021/)で Android アプリを作ることになったのでそれのチュートリアルとして作ったアプリの作り方的なところを備忘録として(超絶雑に)残しておく。
 
 # やること
 
@@ -218,6 +218,138 @@ interface WeatherService {
         @Query("appid") apiKey: String,
         @Query("units") units: String
     ): Call<WeatherInfo>
+}
+```
+
+## Layout Editor で UI を作る
+
+- City Name を入力してボタンを押すと温度が表示されるようにする。
+
+![](/images/first-android/layout.png)
+
+- ソース
+
+```xml:activity_main.xml
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/cityName"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:autofillHints="no"
+            android:ems="10"
+            android:hint="@string/text_placeholder"
+            android:inputType="text"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,TextContrastCheck" />
+
+        <Button
+            android:id="@+id/postButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/post_button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:paddingStart="0dp"
+            android:paddingEnd="8dp"
+            android:text="@string/text_temp"
+            android:textAlignment="textStart"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tempText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:textAlignment="textEnd"
+            android:textSize="24sp"
+            tools:text="13" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+
+## API アクセスの用の記述を追加
+
+- 今回は `MainActivity` に追加
+- Retrofitでアクセスするときはメインスレッドでやるとエラーが起こるので `thread` で行う
+
+```kotlin:MainActivity.kt
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val editCityNameText = findViewById<EditText>(R.id.cityName)
+        val postButton = findViewById<Button>(R.id.postButton)
+
+        postButton.setOnClickListener {
+            fetchApi(editCityNameText.text.toString(), "metric")
+        }
+    }
+
+    private fun fetchApi(cityName: String, units: String) {
+        val moshi = Moshi.Builder()
+            .add(KotlinJsonAdapterFactory())
+            .build()
+
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://api.openweathermap.org/")
+            .addConverterFactory(MoshiConverterFactory.create(moshi))
+            .build()
+
+        val tempText = findViewById<TextView>(R.id.tempText)
+
+        thread {
+            try {
+                val service: WeatherService = retrofit.create(WeatherService::class.java)
+                val weatherApiResponse = service.fetchWeather(
+                    cityName,
+                    BuildConfig.OWM_API_KEY,
+                    units
+                ).execute().body()
+                    ?: throw IllegalStateException("bodyがnullだよ！")
+
+                Handler(Looper.getMainLooper()).post {
+                    tempText.text = weatherApiResponse.main.temp.toString()
+                    Log.d("response-weather", weatherApiResponse.toString())
+                }
+            } catch (e: Exception) {
+                Log.d("response-weather", "debug $e")
+            }
+        }
+    }
 }
 ```
 
