@@ -37,3 +37,46 @@ https://github.com/nemuki/WeatherAndroidApp
    1. Name: WeatherAndroidApp
    2. Minimum SDK: API 24: Android 7.0 (Nougat)
       (これは手持ちの Xperia XZ でもデバッグするかなと思ったためこのバージョンに)
+
+# マニュフェストファイルにネットワークについて追記
+
+- Open Weather Map API にアクセスするためにネットが必要なので `app/src/main/AndroidManifest.xml` にユーザーパーミッションについて追加する
+
+```xml:app/src/main/AndroidManifest.xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nemuki.weatherandroidapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />  <!-- これ -->
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round" … >
+```
+
+# API アクセスをするために Gradle で Retrofit を追加
+
+- 参考にしたところ
+
+https://qiita.com/yoppie_x/items/bbc0ca7a4c8a4b29e141
+
+- `app/build.gradle` の `dependencies` に Retrofit と Moshi を追加
+
+```json:app/build.gradle
+
+dependencies {
+    …
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // 各 2021/11/23 時点の最新版
+    // Retrofit
+    def retrofit_version = '2.9.0'
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+
+    // Moshi
+    def moshi_version = '1.12.0'
+    implementation "com.squareup.moshi:moshi:$moshi_version"
+    implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
+}
+```
