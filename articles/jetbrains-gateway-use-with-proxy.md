@@ -10,7 +10,8 @@ published: true
 https://blog.jetbrains.com/ja/blog/2021/11/29/introducing-remote-development-for-jetbrains-ides/
 その中に Visual Studio Code の拡張機能 [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) と似たような機能が追加されて、ローカルに負担をかけずリモート先のリソースを使った開発を行えるようになりました！！
 
-その中、プロキシ環境下にあるサーバーにIDEバックエンドをダウンロードしようとするとエラーが起こってしまったのでその対処方法を残しておきます。
+
+ところが、プロキシ環境下にあるサーバーにIDEバックエンドをダウンロードしようとするとエラーが起こってしまったのでその対処方法を残しておきます。
 
 # 起こった問題
 
