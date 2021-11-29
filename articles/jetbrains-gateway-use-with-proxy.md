@@ -3,7 +3,7 @@ title: "Proxy環境下にあるサーバーで JetBrains Gateway の IDE バッ�
 emoji: "🌤"
 type: "tech"
 topics: ["JetBrains", "JetBrainsGateway"]
-published: ture
+published: true
 ---
 
 2021年11月29日、[JetBrains IDE 向けリモート開発機能の紹介](https://blog.jetbrains.com/ja/blog/2021/11/29/introducing-remote-development-for-jetbrains-ides/)としてJetBrains Gateway がリリースされました！！
