@@ -15,8 +15,10 @@ GitHub で依存管理に使っている Dependabot ですが、いちいち自�
 - [x] パッチバージョンのアップデートであること
 - [x] PR の Approve が 1 以上あること
 - [x] ビルドテスト、ESLint、Prettier のチェックに成功していること
-- [x] PR の作成者が `dependabot[bot]` であること
+- [x] PR の作成者が`dependabot[bot]`であること
 - [x] PR ブランチが最新の状態になっていること
+
+<!-- textlint-disable ja-technical-writing/ja-no-mixed-period -->
 
 :::details Marmeid で書いたフローチャート
 
@@ -38,9 +40,11 @@ flowchart TD
 
 :::
 
+<!-- textlint-enable ja-technical-writing/ja-no-mixed-period -->
+
 # Dependabot の設定
 
-`npm` と `github-actions` を週でアップデートの確認をしてもらっています。
+`npm`と`github-actions`を週でアップデートの確認をしてもらっています。
 
 ```yml:.github/dependabot.yml
 version: 2
@@ -60,8 +64,10 @@ updates:
 
 ## パッチアップデートの判別と自動 Approve
 
-`if: ${{ steps.dependabot-metadata.outputs.update-type == 'version-update:semver-patch' }}` にてパッチアップデートの判別をしています。
-ここでパッチアップデートの場合は `github-actions` ユーザーが Approve をします。
+`if: ${{ steps.dependabot-metadata.outputs.update-type == 'version-update:semver-patch' }}`にてパッチアップデートの判別をしています。
+ここでパッチアップデートの場合は`github-actions`ユーザーが Approve をします。
+
+`failed to create review: Message: GitHub Actions is not permitted to approve pull requests.`で Action が失敗する場合は [`github-actions`ユーザーによる PR の Approve を可能にする](#github-actions-ユーザーによる-pr-の-approve-を可能にする) を設定する必要があります。
 
 ```yml:.github/dependabot-auto-approve.yml
 name: Auto approve on dependabot PR at patch update
@@ -92,7 +98,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-## `github-actions` ユーザーによる PR の Approve を可能にする
+### `github-actions`ユーザーによる PR の Approve を可能にする
 
 Organization の設定から以下を許可する必要があります。
 <https://github.com/organizations/org-name/settings/actions> → Workflow permissions
@@ -109,8 +115,8 @@ Choose whether GitHub Actions can create pull requests or submit approving pull 
 
 ## ビルドテスト
 
-テストコードを実装していればそれを指定するのもいいかもしれません。
-`concurrency` を使って同じ PR の Action が 2 重で走らないようにしています。
+単体テストを実装していればそれを指定するのもいいかもしれません。
+`concurrency`を使って同じ PR の Action が 2 重で走らないようにしています。
 
 ```yml:.github/build.yml
 name: Build test
@@ -182,7 +188,7 @@ concurrency:
 # Mergify の設定
 
 <https://mergify.com/> から GitHub アカウントでログインし、設定したいリポジトリと連携します。
-Config Editor から以下の設定を追加します。
+リポジトリの連携後、Config Editor から以下の設定を追加します。([公式ドキュメント](https://docs.mergify.com/))
 
 ```yml:.mergify.yml
 pull_request_rules:
@@ -201,3 +207,21 @@ pull_request_rules:
     actions:
       update:
 ```
+
+設定では以下の点につまづきました。
+
+- `check-success`に指定する名前
+  - Action の job 名を指定する必要があります。
+- `#`で始まるの属性の指定方法
+  - シングルクォーテーションまたはダブルクォーテーションで括って文字列として認識させる必要があります。
+
+# 動作確認
+
+うまく設定ができると PR に Mergify Summary が追加され、`Rule: automatic merge for Dependabot pull requests (merge)`に全てチェックがつくと自動でマージされます。
+
+![mergify-summary](/images/dependabot-auto-merge/mergify-summary.png)
+
+# まとめ
+
+今回は GitHub Actions と Mergify を使って条件付きで Dependabot の PR を自動マージするようにしました。
+みなさんもご自身の環境に合わせて設定してみてはいかがでしょうか。
