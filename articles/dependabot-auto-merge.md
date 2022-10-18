@@ -12,11 +12,11 @@ GitHub で依存管理に使っている Dependabot ですが、いちいち自�
 
 # 今回の条件
 
-- [x] パッチバージョンのアップデート
-- [x] ビルドテスト、ESLint、Prettier のチェックに成功
-- [x] PR の Approve が 1 以上
-- [x] PR の作成者が `dependabot[bot]`
-- [x] PR ブランチが最新の状態になっている
+- [x] パッチバージョンのアップデートであること
+- [x] ビルドテスト、ESLint、Prettier のチェックに成功していること
+- [x] PR の Approve が 1 以上あること
+- [x] PR の作成者が `dependabot[bot]` であること
+- [x] PR ブランチが最新の状態になっていること
 
 :::details Marmeid で書いたフローチャート
 
