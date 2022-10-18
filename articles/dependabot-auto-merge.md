@@ -3,7 +3,7 @@ title: "DependabotのPRを条件付きで自動マージする"
 emoji: "🤖"
 type: "tech"
 topics: ["Dependabot", "GitHubActions", "Mergify"]
-published: false
+published: true
 ---
 
 GitHub で依存管理に使っている Dependabot ですが、いちいち自分でマージするのは面倒に感じます。
