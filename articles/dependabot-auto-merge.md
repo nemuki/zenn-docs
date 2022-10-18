@@ -1,8 +1,8 @@
 ---
-title: "DependabotのPRを条件付きで自動マージする"
-emoji: "🤖"
-type: "tech"
-topics: ["Dependabot", "GitHubActions", "Mergify"]
+title: 'DependabotのPRを条件付きで自動マージする'
+emoji: '🤖'
+type: 'tech'
+topics: ['Dependabot', 'GitHubActions', 'Mergify']
 published: true
 ---
 
@@ -67,7 +67,7 @@ updates:
 `if: ${{ steps.dependabot-metadata.outputs.update-type == 'version-update:semver-patch' }}`にてパッチアップデートの判別をしています。
 ここでパッチアップデートの場合は`github-actions`ユーザーが Approve をします。
 
-`failed to create review: Message: GitHub Actions is not permitted to approve pull requests.`で Action が失敗する場合は [`github-actions`ユーザーによる PR の Approve を可能にする](#github-actions-ユーザーによる-pr-の-approve-を可能にする) を設定する必要があります。
+`failed to create review: Message: GitHub Actions is not permitted to approve pull requests.`で Action が失敗する場合は [`github-actions`ユーザーによる PR の Approve を可能にする](#github-actionsユーザーによる-pr-の-approve-を可能にする) を設定する必要があります。
 
 ```yml:.github/dependabot-auto-approve.yml
 name: Auto approve on dependabot PR at patch update
