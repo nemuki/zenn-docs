@@ -1,8 +1,8 @@
 ---
-title: "KotlinとRetrofitを使った初めてのAndroidアプリ開発"
-emoji: "🌤"
-type: "tech"
-topics: ["Android", "Kotlin", "Retrofit"]
+title: 'KotlinとRetrofitを使った初めてのAndroidアプリ開発'
+emoji: '🌤'
+type: 'tech'
+topics: ['Android', 'Kotlin', 'Retrofit']
 published: true
 ---
 
@@ -42,7 +42,7 @@ https://github.com/nemuki/WeatherAndroidApp
 
 ## マニュフェストファイルにネットワークについて追記
 
-- Open Weather Map API にアクセスするためにネットが必要なので `app/src/main/AndroidManifest.xml` にユーザーパーミッションについて追加する
+- Open Weather Map API にアクセスするためはインターネットが必要なので`app/src/main/AndroidManifest.xml`にユーザーパーミッションについて追加する
 
 ```xml:app/src/main/AndroidManifest.xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -58,7 +58,7 @@ https://github.com/nemuki/WeatherAndroidApp
 
 ## API アクセスをするために Gradle で Retrofit を追加
 
-- `app/build.gradle` の `dependencies` に Retrofit と Moshi を追加
+- `app/build.gradle`の`dependencies`に Retrofit と Moshi を追加
 
 ```groovy:app/build.gradle
 
@@ -85,6 +85,7 @@ dependencies {
 
 - Open Weather Map API からは以下のようなフォーマットで天気データが送られてくる
 
+<!-- textlint-disable ja-technical-writing/ja-no-mixed-period -->
 :::details Open Weather Map API のレスポンス
 
 ```json:response
@@ -134,6 +135,7 @@ dependencies {
 ```
 
 :::
+<!-- textlint-enable ja-technical-writing/ja-no-mixed-period -->
 
 - これ用に data class を作成する
 
@@ -200,9 +202,9 @@ data class Sys(
 
 ## Refrofit で GET アクセスをするためにインターフェースを作成
 
-- Open Weather Map の [Current weather data](https://openweathermap.org/current) API のアクセス URL は `api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}`
-- ドメイン以下のパスを GET アノテーションの引数にわたすのでこの場合は `data/2.5/weather/` を渡す
-  - GET のパラメーターが必要な場合は `@Query` オプションで指定できる
+- Open Weather Map の [Current weather data](https://openweathermap.org/current) API のアクセス URL は`api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}`
+- ドメイン以下のパスを GET アノテーションの引数にわたすのでこの場合は`data/2.5/weather/`を渡す
+  - GET のパラメーターが必要な場合は`@Query`オプションで指定できる
 
 ```kotlin:WeatherService.kt
 package com.id.packagename
@@ -305,7 +307,7 @@ interface WeatherService {
 
 https://github.com/google/secrets-gradle-plugin
 
-1. プロジェクトルートの `build.gradle(PackageName)` の `dependencies` に追記
+1. プロジェクトルートの`build.gradle(PackageName)`の`dependencies`に追記
 
 ```groovy:build.gradle
 dependencies {
@@ -314,7 +316,7 @@ dependencies {
 }
 ```
 
-2. アプリレベルの `build.gradle(:app)` の `plugins` に追記
+2. アプリレベルの`build.gradle(:app)`の`plugins`に追記
 
 ```groovy:build.gradle
 plugins {
@@ -323,19 +325,19 @@ plugins {
 }
 ```
 
-3. `local.properties` に値を追加する
+3. `local.properties`に値を追加する
 
 ```sh:local.properties
 OWM_API_KEY=your_api_key
 ```
 
-4. `BuildConfig.OWM_API_KEY` と書くことでソースからアクセスできる
+4. `BuildConfig.OWM_API_KEY`と書くことでソースからアクセスできる
    1. 最初はエラーが出るが、ビルドしたら正常にうごく(はず)
 
 ## API アクセスの用の記述を追加
 
-- 今回は `MainActivity` に追加
-- Retrofit でアクセスするときはメインスレッドでやるとエラーが起こるので `thread` で行う
+- 今回は`MainActivity`に追加
+- Retrofit でアクセスするときはメインスレッドでやるとエラーが起こるので`thread`で行う
 
 ```kotlin:MainActivity.kt
 class MainActivity : AppCompatActivity() {
@@ -394,8 +396,8 @@ class MainActivity : AppCompatActivity() {
 
 https://twitter.com/nemuki_dev/status/1462683570817093632
 
-- `Code` 表示にして `EditText` を確認する
-  - `android:autofillHints="no"` に変更したら UI が表示された
+- `Code`表示にして`EditText`を確認する
+  - `android:autofillHints="no"`に変更したら UI が表示された
 
 ```xml:activity_main.xml
 <EditText
