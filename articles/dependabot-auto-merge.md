@@ -7,7 +7,7 @@ published: false
 ---
 
 GitHub で依存管理に使っている Dependabot ですが、いちいち自分でマージするのは面倒に感じます。
-そこで、[GitHub Actions](https://github.co.jp/features/actions) と [Mergify](https://docs.mergify.com/) を使って条件付きで自動マージするようにします。
+そこで、[GitHub Actions](https://github.co.jp/features/actions) と [Mergify](https://mergify.com/) を使って条件付きで自動マージするようにします。
 今回の例では yarn を使った Node.js のプロジェクトを想定していますが、他の環境でも応用できると思います。
 
 # 今回の条件
@@ -60,11 +60,6 @@ updates:
 
 ## パッチアップデートの判別と自動 Approve
 
-ここでは以下の条件を確認します。
-
-- [x] パッチバージョンのアップデートであること
-- [x] PR の Approve が 1 以上あること
-
 `if: ${{ steps.dependabot-metadata.outputs.update-type == 'version-update:semver-patch' }}` にてパッチアップデートの判別をしています。
 ここでパッチアップデートの場合は `github-actions` ユーザーが Approve をします。
 
@@ -114,10 +109,6 @@ Choose whether GitHub Actions can create pull requests or submit approving pull 
 
 ## ビルドテスト
 
-ここでは以下の条件を確認します。
-
-- [x] ビルドテスト、ESLint、Prettier のチェックに成功していること
-
 テストコードを実装していればそれを指定するのもいいかもしれません。
 `concurrency` を使って同じ PR の Action が 2 重で走らないようにしています。
 
@@ -153,10 +144,6 @@ concurrency:
 
 ## ESLint、Prettier のチェック
 
-ここでは以下の条件を確認します。
-
-- [x] ビルドテスト、ESLint、Prettier のチェックに成功していること
-
 依存関係のアップデートに必要か？と考えますが、ESLint と Prettier のアップデートがあったときにチェックしたいので含めています。
 
 ```yml:.github/check.yml
@@ -190,4 +177,27 @@ jobs:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+```
+
+# Mergify の設定
+
+<https://mergify.com/> から GitHub アカウントでログインし、設定したいリポジトリと連携します。
+Config Editor から以下の設定を追加します。
+
+```yml:.mergify.yml
+pull_request_rules:
+  - name: automatic merge for Dependabot pull requests
+    conditions:
+      - author = dependabot[bot] # PR の作成者が `dependabot[bot]` であること
+      - '#approved-reviews-by >= 1' # PR の Approve が 1 以上あること
+      - check-success = build-test # ビルドテストに成功していること
+      - check-success = check-lint-and-format # ESLint、Prettier のチェックに成功していること
+    actions:
+      merge:
+        method: merge
+  - name: automatic update for PR # PR ブランチが最新の状態になっていること
+    conditions:
+      - author = dependabot[bot]
+    actions:
+      update:
 ```
