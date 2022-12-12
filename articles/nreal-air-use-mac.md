@@ -1,5 +1,5 @@
 ---
-title: 'Nreal AirをMacで使う時の設定'
+title: 'Nreal Air を Mac で使う時のおすすめ設定'
 emoji: '🕶️'
 type: 'tech'
 topics: ['NrealAir', 'macOS', 'DisplayMenu']
@@ -19,7 +19,11 @@ https://twitter.com/nemuki_dev/status/1598598629953925121?s=20&t=vNq6zxYJ5ZpEg-Z
 
 [DisplayMenu](https://apps.apple.com/jp/app/display-menu/id549083868?mt=12) などの画面の解像度を調整できるアプリ
 
-# 設定方法
+# おすすめの設定
+
+2つあります。
+
+## 解像度を限界突破させる
 
 1. ディスプレイ設定で Nreal Air を内蔵ディスプレイとミラーリングする
 ![](/images/nreal-air-use-mac/system-settings.png)
@@ -30,6 +34,16 @@ https://twitter.com/nemuki_dev/status/1598598629953925121?s=20&t=vNq6zxYJ5ZpEg-Z
 
 ![](/images/nreal-air-use-mac/display-menu-settings.png)
 
-これを設定するとMacの画面だと小さくてみにくいですが、Nreal Airを通すと見やすくなります。
+これを設定するとMacの画面だと小さくてみにくいですが、Nreal Airを通すとしっかり見えます。
 自分的には文字もぼやけず、作業領域が広くなってとても嬉しいです。
+Nebula Appよりも今はこちらの設定が使いやすくて好きです。
 
+## エディタやブラウザをライトモードで使う
+
+ダークモードで使ってると後ろが透けやすかったり文字がはっきりみなかったりします。
+普通の画面を見る時はダークモードが好きですが、Nreal Air を使う時はライトモードが文字がはっきり見えるのでおすすめです。
+
+# まとめ
+
+自分が Nreal Air を使用している時の設定をまとめてみました。
+みなさんの使いやすい設定があれば教えてください😎
