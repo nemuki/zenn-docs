@@ -25,6 +25,8 @@ https://twitter.com/nemuki_dev/status/1598598629953925121?s=20&t=vNq6zxYJ5ZpEg-Z
 
 ## 解像度を限界突破させる
 
+Nreal Air は 1920 x 1080 までしか対応してないですが、この設定をすると限界突破することができます。
+
 1. ディスプレイ設定で Nreal Air を内蔵ディスプレイとミラーリングする
 ![](/images/nreal-air-use-mac/system-settings.png)
 2. DisplayMenu 等を開いて内蔵ディスプレイの解像度を調整する
@@ -34,7 +36,7 @@ https://twitter.com/nemuki_dev/status/1598598629953925121?s=20&t=vNq6zxYJ5ZpEg-Z
 
 ![](/images/nreal-air-use-mac/display-menu-settings.png)
 
-これを設定するとMacの画面だと小さくてみにくいですが、Nreal Airを通すとしっかり見えます。
+ここまで設定するとMacの画面だと小さくてみにくいですが、Nreal Airを通すとしっかり見えます。
 自分的には文字もぼやけず、作業領域が広くなってとても嬉しいです。
 Nebula Appよりも今はこちらの設定が使いやすくて好きです。
 
