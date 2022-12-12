@@ -3,7 +3,7 @@ title: 'Nreal Air を Mac で使う時のおすすめ設定'
 emoji: '🕶️'
 type: 'tech'
 topics: ['NrealAir', 'macOS', 'DisplayMenu']
-published: false
+published: true
 ---
 
 Nreal Air を Amazon ブラックフライデーで購入して仕事で使う時に使いやすい設定を見つけたので共有します。
