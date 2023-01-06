@@ -15,7 +15,7 @@ published: true
 
 # 出来上がったリポジトリ
 
-https://github.com/nemuki/WeatherAndroidApp
+https://github.com/nemuki/android-kotlin-weather-app
 
 # 開発環境
 
