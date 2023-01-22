@@ -38,6 +38,10 @@ Detekt は reviewdog に標準で定義されていないので、Detekt から�
 [Reporting | Detekt](https://detekt.dev/docs/introduction/reporting)
 <https://github.com/reviewdog/reviewdog#checkstyle-format>
 
+設定後に PR を出し、Detekt に違反していると最初に見せたようなコメントが追加されます。
+
+![最終的な例](/images/detekt-reviewdog/finally.png)
+
 # 注意点
 
 ## リポジトリの設定
