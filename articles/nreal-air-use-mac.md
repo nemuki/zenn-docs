@@ -17,7 +17,9 @@ https://twitter.com/nemuki_dev/status/1598598629953925121?s=20&t=vNq6zxYJ5ZpEg-Z
 
 # 必要なもの
 
+<!-- textlint-disable -->
 [DisplayMenu](https://apps.apple.com/jp/app/display-menu/id549083868?mt=12) などの画面の解像度を調整できるアプリ
+<!-- textlint-enable -->
 
 # おすすめの設定
 
@@ -25,11 +27,13 @@ https://twitter.com/nemuki_dev/status/1598598629953925121?s=20&t=vNq6zxYJ5ZpEg-Z
 
 ## 解像度を限界突破させる
 
-Nreal Air は 1920 x 1080 までしか対応してないですが、この設定をすると限界突破することができます。
+Nreal Air は 1920 x 1080 までしか対応してないですが、この設定をすると限界突破できます。
 
+<!-- textlint-disable -->
 1. ディスプレイ設定で Nreal Air を内蔵ディスプレイとミラーリングする
 ![](/images/nreal-air-use-mac/system-settings.png)
 2. DisplayMenu 等を開いて内蔵ディスプレイの解像度を調整する
+<!-- textlint-enable -->
    - 14インチなら 2294 x 1432
    - 13インチなら 2048 x 1280 がおすすめ
    - 自分がぼやけずに見える範囲で調整してみてください
@@ -48,4 +52,6 @@ Nebula Appよりも今はこちらの設定が使いやすくて好きです。
 # まとめ
 
 自分が Nreal Air を使用している時の設定をまとめてみました。
+<!-- textlint-disable -->
 みなさんの使いやすい設定があれば教えてください😎
+<!-- textlint-enable -->

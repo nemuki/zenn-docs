@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/nemuki/zenn-docs#readme",
   "dependencies": {
-    "zenn-cli": "^0.1.131"
+    "zenn-cli": "^0.1.137"
   },
   "devDependencies": {
     "eslint": "^8.23.1",
