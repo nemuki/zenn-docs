@@ -30,7 +30,7 @@ https://github.com/nemuki/quarkus-kotlin-hello-world/blob/e09492f80b7eced23243f0
 
 ## reviewdog を追加する
 
-この部分です。reviewdog/action-setup を使っています。
+この部分です。`if: failure()`で Detekt の検査で違反された時に発火するよう設定しています。
 
 https://github.com/nemuki/quarkus-kotlin-hello-world/blob/e09492f80b7eced23243f09de68a99749db14e77/.github/workflows/detekt.yml#L31-L41
 
