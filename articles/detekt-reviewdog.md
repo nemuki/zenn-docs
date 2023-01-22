@@ -2,11 +2,11 @@
 title: 'Detekt で reviewdog を飼う'
 emoji: '🐕'
 type: 'tech'
-topics: ['Detekt', 'reviewdog']
+topics: ['Detekt', 'reviewdog', 'GitHubActions']
 published: true
 ---
 
-Detekt を GitHub Actions で検査し、違反があれば reviewdog で通知するように設定してみたので備忘録的な感じで残しておきます。
+Detekt を GitHub Actions で検査し、違反があれば [reviewdog](https://github.com/reviewdog/reviewdog) で通知するように設定してみたので備忘録的な感じで残しておきます。
 [alaegin/Detekt-Action](https://github.com/alaegin/Detekt-Action) がありますが、今回は使わないです。
 
 # 最終的にこうなる
