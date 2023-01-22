@@ -15,7 +15,7 @@ https://github.com/nemuki/quarkus-kotlin-hello-world/blob/41535db887eb5f72125b8b
 
 ![最終的な例](/images/detekt-reviewdog/finally.png)
 
-部分部分で解説していきます。
+要所要所で解説していきます。
 
 ## Detekt を GitHub Actions で検査する
 
@@ -34,7 +34,7 @@ https://github.com/nemuki/quarkus-kotlin-hello-world/blob/e09492f80b7eced23243f0
 
 https://github.com/nemuki/quarkus-kotlin-hello-world/blob/e09492f80b7eced23243f09de68a99749db14e77/.github/workflows/detekt.yml#L31-L41
 
-Detekt は reviewdog に標準で定義されていないので、Detekt から出力される checkstyle XML 方式のレポートを reviewdog に渡すようにします。
+Detekt は reviewdog に標準で定義されていないので、Detekt から出力される checkstyle XML 方式のレポートを reviewdog に渡しています。
 [Reporting | Detekt](https://detekt.dev/docs/introduction/reporting)
 <https://github.com/reviewdog/reviewdog#checkstyle-format>
 
@@ -42,12 +42,13 @@ Detekt は reviewdog に標準で定義されていないので、Detekt から�
 
 ### リポジトリの設定
 
-`https://github.com/[user]/[repo]/settings/actions` 内の Workflow Permissions が Read repository contents permission になっていると `secrets.GITHUB_TOKEN` に書き込み権限がなく 403 エラーが吐き出されてしまいます。
+`https://github.com/[user]/[repo]/settings/actions`内の Workflow Permissions が Read repository contents permission になっていると`secrets.GITHUB_TOKEN`に書き込み権限がなく 403 エラーが吐き出されてしまいます。
 
 ```log
 reviewdog: POST https://api.github.com/repos/user/repo/pulls/number/reviews: 403 Resource not accessible by integration []
 ```
 
+<!-- textlint-disable -->
 変更前
 
 ![Workflow Permissions 変更前](/images/detekt-reviewdog/workflow-permissions-default.png)
@@ -55,6 +56,7 @@ reviewdog: POST https://api.github.com/repos/user/repo/pulls/number/reviews: 403
 変更後
 
 ![Workflow Permissions 変更後](/images/detekt-reviewdog/workflow-permissions-changed.png)
+<!-- textlint-enable -->
 
 ### 変更がないとレビューされない
 
