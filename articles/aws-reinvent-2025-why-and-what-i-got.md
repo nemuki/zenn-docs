@@ -3,7 +3,7 @@ title: 'AWS re:Invent になぜ行き、何を持ち帰ったのか'
 emoji: '🤖'
 type: 'idea' # tech: 技術記事 / idea: アイデア
 topics: ['aws']
-published: false
+published: true
 ---
 
 会社の上司に「行ってみる？」と言われて「行きます」と二つ返事で行くことが決まった AWS re:Invent。そこから何を私は持ち帰ったのか書いてみます。
