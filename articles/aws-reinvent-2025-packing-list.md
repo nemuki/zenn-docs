@@ -3,7 +3,7 @@ title: 'AWS re:Invent 2025 に持っていってよかったものまとめ'
 emoji: '🍣'
 type: 'idea' # tech: 技術記事 / idea: アイデア
 topics: ['aws']
-published: false
+published: true
 ---
 
 AWS re:Invent 2025 に行くにあたって、持っていってよかったものを紹介します！
