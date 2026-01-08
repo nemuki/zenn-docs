@@ -7,7 +7,7 @@ published: true
 ---
 
 GitHub Actions が 2026 年 1 月から料金改定を行い、Larger runners の料金が大幅に下がりました。
-これにより AWS CodeBuild hosted runner を使う場合のコスト差がどうなるかを比較します！
+旧料金時に AWS CodeBuild へ移行を検討・推進している方には朗報でコスト差がどうなるかを比較します！
 
 GitHub Actions の料金改定について
 
@@ -52,8 +52,7 @@ https://resources.github.com/ja/actions/2026-pricing-changes-for-github-actions/
 
 ## まとめ
 
-GitHub Actions の料金が安くなり、Larger runners の導入閾値がすごく下がりました！
-
+GitHub Actions の料金が安くなり、Larger runners の導入閾値がすごく下がりました！また、当初発表されていた Self-hosted runner への加算料金($0.002 / 分)を考えると、CodeBuild と同等または安価に利用できるケースが多くなりそうです。
 
 [^1]: Actions runner pricing - GitHub Docs<br><https://docs.github.com/en/billing/reference/actions-runner-pricing#x64-powered-larger-runners>
 [^2]: Wayback Machine - 20251219092252 - Actions runner pricing - GitHub Docs<br><https://web.archive.org/web/20251219092252/https://docs.github.com/en/billing/reference/actions-runner-pricing>
