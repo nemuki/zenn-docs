@@ -1,9 +1,9 @@
 ---
-title: 'GitHub ActionsとAWS CodeBuildランナーのコスト比較（2026年1月版）'
+title: 'GitHub ActionsとAWS CodeBuildのコスト比較（2026年1月版）'
 emoji: '🔥'
 type: 'tech' # tech: 技術記事 / idea: アイデア
 topics: ['githubactions', 'codebuild']
-published: false
+published: true
 ---
 
 GitHub Actions が 2026 年 1 月から料金改定を行い、Larger runners の料金が大幅に下がりました。
